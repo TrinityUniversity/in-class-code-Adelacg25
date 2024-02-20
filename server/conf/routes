@@ -3,8 +3,13 @@
 # ~~~~
 
 # Home page
-GET        /                             controllers.Application.index
+GET        /                              controllers.Application.index
+GET        /table                         controllers.Application.main
+GET        /form                          controllers.Application.form
+GET        /validateLoginGet              controllers.Application.validateLoginGet(name, color)
+POST        /validateLoginPost             controllers.Application.validateLoginPost
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
+
