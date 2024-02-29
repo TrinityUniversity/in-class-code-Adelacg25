@@ -35,5 +35,13 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
     }.getOrElse(Ok("Oops"))
   }
 
+  def validateLoginPost1 = Action { request => 
+    val postVals = request.body.asFormUrlEncoded
+    postVals.map { args => 
+      val name = args("name").head
+      Ok(s"$name logged in ")
+    }.getOrElse(Ok("Oops"))
+  }
+
 
 }

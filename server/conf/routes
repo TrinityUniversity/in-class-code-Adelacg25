@@ -7,7 +7,10 @@ GET        /                              controllers.Application.index
 GET        /table                         controllers.Application.main
 GET        /form                          controllers.Application.form
 GET        /validateLoginGet              controllers.Application.validateLoginGet(name, color)
++nocsrf
 POST        /validateLoginPost             controllers.Application.validateLoginPost
++nocsrf
+POST        /validateLoginPost1             controllers.Application.validateLoginPost1
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
